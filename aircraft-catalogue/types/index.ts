@@ -5,9 +5,25 @@ export interface CustomButtonProps {
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     btnType?: "button" | "submit";
+    textStyles?: string;
+    rightIcon?: string;
+    isDisabled?: boolean;
 }
 
 export interface SearchManufacturerProps {
     manufacturer: string;
     setManufacturer: (manufacturer: string) => void;
+}
+
+export interface AircraftProps {
+    manufacturer: string;
+    model: string;
+    engine_type: string;
+    max_speed_knots: number;
+    ceiling_ft: number;
+    gross_weight_lbs: number;
+    length_ft: number;
+    height_ft: number;
+    wing_span_ft: number;
+    range_nautical_miles: number;
 }

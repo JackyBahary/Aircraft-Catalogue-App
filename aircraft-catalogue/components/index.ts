@@ -5,6 +5,8 @@ import Footer from './Footer'
 import SearchBar from './SearchBar'
 import CustomFilter from './CustomFilter'
 import SearchManufacturer from './SearchManufacturer'
+import AircraftCard from './AircraftCard'
+import AircraftDetails from './AircraftDetails'
 
 export {
     Hero,
@@ -13,5 +15,7 @@ export {
     Footer,
     SearchBar,
     CustomFilter,
-    SearchManufacturer
+    SearchManufacturer,
+    AircraftCard,
+    AircraftDetails,
 }
