@@ -1,10 +1,12 @@
+import { AircraftProps } from "@/types";
+
 export async function fetchAircrafts() {
     const headers = {
 		'X-RapidAPI-Key': '9fb5e09423msh782557aacae8620p15a2a5jsn8719f51735fb',
 		'X-RapidAPI-Host': 'aircraft-by-api-ninjas.p.rapidapi.com'
 	}
 
-    const response = await fetch ('https://aircraft-by-api-ninjas.p.rapidapi.com/v1/aircraft?manufacturer=Airbus&limit=30', {headers: headers});
+    const response = await fetch ('https://aircraft-by-api-ninjas.p.rapidapi.com/v1/aircraft?manufacturer=Boeing&limit=30', {headers: headers});
 
     const result = await response.json();
 
@@ -18,3 +20,7 @@ export const calculateAircraftRent = (range: number) => {
 
     return rentalRatePerDay.toLocaleString();
 }
+
+// export const generateAircraftImageUrl = (aircraft: AircraftProps, angle?: string) => {
+
+// } NO API available to get Aircraft Images
