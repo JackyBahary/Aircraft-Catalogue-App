@@ -27,3 +27,11 @@ export interface AircraftProps {
     wing_span_ft: number;
     range_nautical_miles: number;
 }
+
+export interface FilterProps {
+    manufacturer: string;
+    model: string;
+    limit: number;
+    engine: string;
+    range: number;
+}

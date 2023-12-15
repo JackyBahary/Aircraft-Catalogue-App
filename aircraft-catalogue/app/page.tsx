@@ -1,8 +1,14 @@
 import { AircraftCard, CustomFilter, Hero, SearchBar } from "@/components";
 import { fetchAircrafts } from "@/utils";
 
-export default async function Home() {
-  const allAircrafts = await fetchAircrafts();
+export default async function Home({ searchParams }) {
+  const allAircrafts = await fetchAircrafts({
+    manufacturer: searchParams.manufacturer || " ",
+    model: searchParams.model || " ",
+    limit: searchParams.limit || 10,
+    engine: searchParams.engine || "Jet",
+    range: searchParams.range || "",
+  });
 
   const isDataEmpty =
     !Array.isArray(allAircrafts) || allAircrafts.length < 1 || !allAircrafts;
