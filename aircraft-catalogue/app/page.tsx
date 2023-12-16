@@ -3,9 +3,9 @@ import { fetchAircrafts } from "@/utils";
 
 export default async function Home({ searchParams }) {
   const allAircrafts = await fetchAircrafts({
-    manufacturer: searchParams.manufacturer || " ",
-    model: searchParams.model || " ",
-    limit: searchParams.limit || 10,
+    manufacturer: searchParams.manufacturer || "",
+    model: searchParams.model || "",
+    limit: searchParams.limit || 30,
     engine: searchParams.engine || "Jet",
     range: searchParams.range || "",
   });
