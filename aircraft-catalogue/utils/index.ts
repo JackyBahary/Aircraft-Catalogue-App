@@ -25,3 +25,15 @@ export const calculateAircraftRent = (range: number) => {
 // export const generateAircraftImageUrl = (aircraft: AircraftProps, angle?: string) => {
 
 // } NO API available to get Aircraft Images
+
+export const updateSearchParams = (type: string, value: string) => {
+    const searchParams = new URLSearchParams(window.location.search);
+
+    searchParams.set(type, value);
+
+    const newPathname = `${
+      window.location.pathname
+    }?${searchParams.toString()}`;
+
+    return newPathname;
+}

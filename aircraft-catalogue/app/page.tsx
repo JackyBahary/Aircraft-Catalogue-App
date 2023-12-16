@@ -1,4 +1,5 @@
 import { AircraftCard, CustomFilter, Hero, SearchBar } from "@/components";
+import { engine, range } from "@/constants/constants";
 import { fetchAircrafts } from "@/utils";
 
 export default async function Home({ searchParams }) {
@@ -26,8 +27,8 @@ export default async function Home({ searchParams }) {
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            <CustomFilter title="engine" options={engine} />
+            <CustomFilter title="range" options={range} />
           </div>
         </div>
         {!isDataEmpty ? (

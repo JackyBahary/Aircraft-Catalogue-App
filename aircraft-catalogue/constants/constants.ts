@@ -16,31 +16,41 @@ export const manufacturers = [
   "AVIC (Aviation Industry Corporation of China)"
 ];
 
-export const yearsOfProduction = [
-  { title: "Year", value: "" },
-  { title: "2015", value: "2015" },
-  { title: "2016", value: "2016" },
-  { title: "2017", value: "2017" },
-  { title: "2018", value: "2018" },
-  { title: "2019", value: "2019" },
-  { title: "2020", value: "2020" },
-  { title: "2021", value: "2021" },
-  { title: "2022", value: "2022" },
-  { title: "2023", value: "2023" },
+export const range = [
+  { title: "Range", value: "" },
+  { title: "1000", value: "1000" },
+  { title: "2000", value: "2000" },
+  { title: "3000", value: "3000" },
+  { title: "4000", value: "4000" },
+  { title: "5000", value: "5000" },
+  { title: "6000", value: "6000" },
+  { title: "7000", value: "7000" },
+  { title: "8000", value: "8000" },
+  { title: "9000", value: "9000" },
+  { title: "10000", value: "10000" },
+  { title: "11000", value: "11000" },
+  { title: "12000", value: "12000" },
+  { title: "13000", value: "13000" },
+  { title: "14000", value: "14000" },
+  { title: "15000", value: "15000" },
 ];
 
-export const fuels = [
+export const engine = [
   {
-    title: "Fuel",
+    title: "Engine",
     value: "",
   },
   {
-    title: "Gas",
-    value: "Gas",
+    title: "Jet",
+    value: "Jet",
   },
   {
-    title: "Electricity",
-    value: "Electricity",
+    title: "Piston",
+    value: "Piston",
+  },
+  {
+    title: "Propjet",
+    value: "Propjet",
   },
 ];
 
