@@ -8,7 +8,7 @@ export default async function Home({ searchParams }) {
     manufacturer: searchParams.manufacturer || "",
     model: searchParams.model || "",
     limit: searchParams.limit || 10,
-    engine: searchParams.engine || "",
+    engine: searchParams.engine || "Jet",
     range: searchParams.range || "",
   });
 
