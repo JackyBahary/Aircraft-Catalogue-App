@@ -1,4 +1,5 @@
 import { AircraftCard, CustomFilter, Hero, SearchBar } from "@/components";
+import ShowMore from "@/components/ShowMore";
 import { engine, range } from "@/constants/constants";
 import { fetchAircrafts } from "@/utils";
 
@@ -6,8 +7,8 @@ export default async function Home({ searchParams }) {
   const allAircrafts = await fetchAircrafts({
     manufacturer: searchParams.manufacturer || "",
     model: searchParams.model || "",
-    limit: searchParams.limit || 30,
-    engine: searchParams.engine || "Jet",
+    limit: searchParams.limit || 10,
+    engine: searchParams.engine || "",
     range: searchParams.range || "",
   });
 
@@ -38,6 +39,11 @@ export default async function Home({ searchParams }) {
                 <AircraftCard aircraft={aircraft} />
               ))}
             </div>
+
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allAircrafts.length}
+            />
           </section>
         ) : (
           <div className="home__error-container">
